@@ -1,0 +1,206 @@
+html, body{
+    margin: 0;
+    padding: 0;
+    background-color:#C7CBDA;
+    font-family: sans-serif;
+    }
+table, td, tr {
+    /*border: 1px solid;
+    border-color: black;*/
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4px;
+    
+}
+.zoom:hover {
+    transform: scale(1.05); /* (150% зум - Примечание: если масштаб слишком велик, он будет выходить за пределы видового экрана) */
+    
+    background-color: rgb(255, 255, 255);
+    outline: 2px solid rgb(145, 13, 13);
+    
+}
+
+.slogan {
+    color:#34516C;
+}
+
+.zoom {
+    
+    background-color: green;
+    transition: transform .2s; /* Animation */
+    
+    margin: 0 auto;
+  }
+table, td, tr {
+    text-align: center;
+    
+}
+.main-list {
+    background-color: rgb(255, 255, 255);
+}
+.main-list {
+    border-radius: 10%;
+    
+}
+.main-list {
+    
+    padding-top: 5%;
+}
+
+#cart_sign {
+    height: 40px; 
+    width: 40px;
+    text-align: center;
+    background: url('cart_2_condition.png') no-repeat left top;
+    margin-left: auto;
+    margin-right: auto;
+}
+#cart_sign:hover { 
+    background-position: -41px 0px;
+    text-align: center; 
+}
+#home_sign {
+    height: 40px; 
+    width: 40px;
+    background: url('home2.png') no-repeat left top;
+    margin-left: auto;
+    margin-right: auto;
+}
+#home_sign:hover { 
+    background-position: -40px 0px;
+}
+#products_sign {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('products2.png') no-repeat left top;
+}
+#products_sign:hover {
+    background-position: -40px 0px;
+}
+#info_sign {
+    height: 40px;
+    width: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    background: url('info2_new.png') no-repeat left top;
+}
+
+#info_sign:hover {
+    background-position: -40px 0px;
+}
+
+
+
+/*                                                                                  */
+
+
+
+.overlay {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    visibility: hidden;
+    /* фон затемнения */
+    background-color: rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    position: fixed; /* фиксированное поцизионирование */
+    cursor: default; /* тип курсара */
+    -webkit-transition: opacity .5s;
+    -moz-transition: opacity .5s;
+    -ms-transition: opacity .5s;
+    -o-transition: opacity .5s;
+    transition: opacity .5s;
+    }
+    .overlay:target {
+    visibility: visible;
+    opacity: 1;
+    }
+    .is-image {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display:block;
+    margin: 10;
+    width: 100%;
+    height: auto;
+        /* скругление углов встроенных картинок */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    }
+    /* встроенные элементы м-медиа, фреймы */
+    embed, iframe {
+    top: 0;
+    right: 0;
+    bottom: 0; 
+    left: 0; 
+    display:block;
+    margin: auto;
+    min-width: 320px;
+    max-width: 600px;
+    width: 100%;
+    }
+    .popup h1 { /* заголовок 1 */
+    color: #008000;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0,0,0,.3);
+    font:24px 'Trebuchet MS', Helvetica, sans-serif;
+    font-weight: bold;
+    }
+    .popup h2 { /* заголовок 2 */
+    color: #008000;
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0,0,0,.3);
+    font:22px 'Trebuchet MS', Helvetica, sans-serif;
+    }
+    /*** Формируем стили модального окна ***/
+    .popup {
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 14px;
+    z-index: 10;
+    display: block;
+    visibility: hidden;
+    margin: 0 auto;
+    width: 90%;
+    min-width: 320px;
+    max-width: 600px;
+    /* фиксированное позиционирование, окно стабильно при прокрутке */
+    position: fixed;
+    padding: 15px;
+    border: 1px solid #383838;
+    /* скругление углов */
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    border-radius: 4px;
+    background-color: #FFFFFF;
+    /* внешняя тень блока */
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -moz-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -ms-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    -o-box-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.8);
+    /* полная прозрачность окна, появление при клике */
+    opacity: 0;
+    /* эффект перехода (появление) */
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+    transition: all ease .5s;
+    }
+    /* активируем появление окна и затемнение фона */
+    .overlay:target+.popup {
+    top: 20%; /* положение окна от верха страницы при появлении */
+    visibility: visible;
+    opacity: 1; /* убираем прозрачность */
+    }
